@@ -122,34 +122,44 @@ graph TD;
 ## 3. Component Diagram (C4 Level 3)
 ```mermaid
 graph TD;
+    classDef serviceStyle fill:#4CAF50,stroke:#388E3C,stroke-width:2px,color:white;
+    classDef dbStyle fill:#673AB7,stroke:#512DA8,stroke-width:2px,color:white;
+    classDef externalStyle fill:#FF5722,stroke:#E64A19,stroke-width:2px,color:white;
+
     subgraph Authentication Service
-        LoginHandler[Login Handler]
-        RegisterHandler[Register Handler]
-        TokenValidator[Token Validator]
+        LoginHandler["Login Handler"]
+        RegisterHandler["Register Handler"]
+        TokenValidator["Token Validator"]
     end
     
     subgraph Event Management Service
-        EventCreator[Create Event]
-        EventUpdater[Update Event]
-        EventLister[List Events]
+        EventCreator["Create Event"]
+        EventUpdater["Update Event"]
+        EventLister["List Events"]
     end
     
     subgraph Booking Management Service
-        BookingCreator[Create Booking]
-        BookingUpdater[Update Booking]
-        BookingLister[List Bookings]
+        BookingCreator["Create Booking"]
+        BookingUpdater["Update Booking"]
+        BookingLister["List Bookings"]
     end
     
     subgraph Payment Processing Service
-        PaymentProcessor[Process Payments]
-        RefundHandler[Handle Refunds]
+        PaymentProcessor["Process Payments"]
+        RefundHandler["Handle Refunds"]
     end
     
+    %% Relationships
     LoginHandler -- Validates --> TokenValidator;
     RegisterHandler -- Creates --> UsersTable;
     EventCreator -- Stores --> EventsTable;
     BookingCreator -- Stores --> BookingsTable;
-    PaymentProcessor -- Sends Requests --> PaymentGateway[Payment Gateway];
+    PaymentProcessor -- Sends Requests --> PaymentGateway["Payment Gateway"];
+
+    %% Apply styles
+    class LoginHandler,RegisterHandler,TokenValidator,EventCreator,EventUpdater,EventLister,BookingCreator,BookingUpdater,BookingLister,PaymentProcessor,RefundHandler serviceStyle;
+    class UsersTable,EventsTable,BookingsTable dbStyle;
+    class PaymentGateway externalStyle;
 ```
 
 ## 4. Code Diagram (C4 Level 4) 
