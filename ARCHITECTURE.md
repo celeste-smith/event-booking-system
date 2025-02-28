@@ -32,27 +32,42 @@ The C4 model consists of four levels of abstraction:
 
 ```mermaid
 graph TD;
-    subgraph Users
-        Attendee[Attendee]
-        Organizer[Event Organizer]
-        Admin[Admin]
-    end
-
-    subgraph EventBookingSystem[Event Booking System]
-        WebApp[Web Application]
-        API[Backend API]
-        DB[(Database)]
-        PaymentGateway[[Payment Gateway]]
-        NotificationService[[Email/SMS Notifications]]
+    %% Define styles
+    classDef userStyle fill:#ffcc00,stroke:#d4a017,stroke-width:2px;
+    classDef systemStyle fill:#009688,stroke:#00796B,stroke-width:2px,color:white;
+    classDef serviceStyle fill:#607D8B,stroke:#455A64,stroke-width:2px,color:white;
+    classDef dbStyle fill:#673AB7,stroke:#512DA8,stroke-width:2px,color:white;
+    classDef externalStyle fill:#FF5722,stroke:#E64A19,stroke-width:2px,color:white;
+    
+    subgraph Users["Users"]
+        Attendee["Attendee"]
+        Organizer["Event Organizer"]
+        Admin["Admin"]
     end
     
+    subgraph EventBookingSystem["Event Booking System"]
+        WebApp["Web Application"]
+        API["Backend API"]
+        DB[("Database")]
+        PaymentGateway[["Payment Gateway"]]
+        NotificationService[["Email/SMS Notifications"]]
+    end
+    
+    %% Define relationships
     Attendee -- Books Events --> WebApp;
-    Organiser -- Manages Events --> WebApp;
+    Organizer -- Manages Events --> WebApp;
     Admin -- Oversees System --> WebApp;
     WebApp -- Sends Requests --> API;
     API -- Reads/Writes --> DB;
     API -- Processes Payments --> PaymentGateway;
     API -- Sends Notifications --> NotificationService;
+
+    %% Apply styles
+    class Attendee,Organizer,Admin userStyle;
+    class WebApp,API systemStyle;
+    class DB dbStyle;
+    class PaymentGateway,NotificationService externalStyle;
+
 ```
 
 ## 2. Container Diagram (C4 Level 2)
