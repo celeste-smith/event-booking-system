@@ -68,6 +68,7 @@ graph TD;
     class DB dbStyle;
     class PaymentGateway,NotificationService externalStyle;
 
+
 ```
 
 ## 2. Container Diagram (C4 Level 2)
