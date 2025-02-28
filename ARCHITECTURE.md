@@ -125,7 +125,7 @@ graph TD;
     PaymentProcessor -- Sends Requests --> PaymentGateway[Payment Gateway];
 ```
 
-## 4. Code Diagram (C4 Level 4) - (Example Representation)
+## 4. Code Diagram (C4 Level 4) 
 ```mermaid
 classDiagram
     class User {
