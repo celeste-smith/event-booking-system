@@ -166,6 +166,7 @@ graph TD;
 
 ## 4. Code Diagram (C4 Level 4) 
 ```mermaid
+```mermaid
 classDiagram
     class User {
         +id: UUID
@@ -196,19 +197,9 @@ classDiagram
         +status: String
     }
     
-    %% Define styles
-    classDef entityStyle fill:#b0c4de,stroke:#4682B4,stroke-width:2px,color:black;
-    classDef relationStyle stroke:#FF4500,stroke-width:2px;
-
-    %% Apply styles
-    class User,Event,Booking,Payment entityStyle;
-    linkStyle 0 relationStyle;
-    linkStyle 1 relationStyle;
-    linkStyle 2 relationStyle;
-
-    %% Define Relationships
     User --> Booking : "makes"
     Booking --> Event : "reserves"
     Booking --> Payment : "triggers"
-
 ```
+
+
