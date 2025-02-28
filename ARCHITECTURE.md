@@ -33,7 +33,7 @@ The C4 model consists of four levels of abstraction:
 ```mermaid
 graph TD;
     %% Define styles
-    classDef userStyle fill:#4a90e2,stroke:#4a90e2,stroke-width:2px;
+    classDef userStyle fill:#007bff,stroke:#007bff,stroke-width:2px;
     classDef systemStyle fill:#009688,stroke:#00796B,stroke-width:2px,color:white;
     classDef serviceStyle fill:#607D8B,stroke:#455A64,stroke-width:2px,color:white;
     classDef dbStyle fill:#673AB7,stroke:#512DA8,stroke-width:2px,color:white;
