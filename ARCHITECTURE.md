@@ -66,10 +66,8 @@ graph TD;
     class Attendee,Organizer,Admin userStyle;
     class WebApp,API systemStyle;
     class DB dbStyle;
-    class PaymentGateway,NotificationService externalStyle;
-
-
 ```
+
 
 ## 2. Container Diagram (C4 Level 2)
 ```mermaid
