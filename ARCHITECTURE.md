@@ -166,7 +166,6 @@ graph TD;
 
 ## 4. Code Diagram (C4 Level 4) 
 ```mermaid
-```mermaid
 classDiagram
     class User {
         +id: UUID
