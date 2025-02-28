@@ -210,4 +210,5 @@ classDiagram
     User --> Booking : "makes"
     Booking --> Event : "reserves"
     Booking --> Payment : "triggers"
+
 ```
