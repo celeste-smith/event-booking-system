@@ -72,25 +72,31 @@ graph TD;
 ## 2. Container Diagram (C4 Level 2)
 ```mermaid
 graph TD;
+    classDef frontendStyle fill:#FFC107,stroke:#FF9800,stroke-width:2px,color:black;
+    classDef backendStyle fill:#03A9F4,stroke:#0288D1,stroke-width:2px,color:white;
+    classDef dbStyle fill:#673AB7,stroke:#512DA8,stroke-width:2px,color:white;
+    classDef externalStyle fill:#FF5722,stroke:#E64A19,stroke-width:2px,color:white;
+
     subgraph Web Application
-        Frontend[React/Angular Web App]
+        Frontend["React/Angular Web App"]
     end
     
     subgraph Backend API
-        AuthService[Authentication Service]
-        EventService[Event Management Service]
-        BookingService[Booking Management Service]
-        PaymentService[Payment Processing Service]
-        NotificationService[Email/SMS Notification Service]
+        AuthService["Authentication Service"]
+        EventService["Event Management Service"]
+        BookingService["Booking Management Service"]
+        PaymentService["Payment Processing Service"]
+        NotificationService["Email/SMS Notification Service"]
     end
     
     subgraph Database
-        UsersTable[(Users Table)]
-        EventsTable[(Events Table)]
-        BookingsTable[(Bookings Table)]
-        PaymentsTable[(Payments Table)]
+        UsersTable[("(Users Table)")]
+        EventsTable[("(Events Table)")]
+        BookingsTable[("(Bookings Table)")]
+        PaymentsTable[("(Payments Table)")]
     end
-    
+
+    %% Relationships
     Frontend -- Calls --> AuthService;
     Frontend -- Calls --> EventService;
     Frontend -- Calls --> BookingService;
@@ -102,8 +108,15 @@ graph TD;
     BookingService -- Stores Data --> BookingsTable;
     PaymentService -- Stores Data --> PaymentsTable;
     
-    PaymentService -- Calls --> PaymentGateway[Payment Gateway];
-    NotificationService -- Sends --> EmailSMS[Email/SMS Provider];
+    PaymentService -- Calls --> PaymentGateway["Payment Gateway"];
+    NotificationService -- Sends --> EmailSMS["Email/SMS Provider"];
+
+    %% Apply styles
+    class Frontend frontendStyle;
+    class AuthService,EventService,BookingService,PaymentService,NotificationService backendStyle;
+    class UsersTable,EventsTable,BookingsTable,PaymentsTable dbStyle;
+    class PaymentGateway,EmailSMS externalStyle;
+
 ```
 
 ## 3. Component Diagram (C4 Level 3)
