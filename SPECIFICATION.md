@@ -1,6 +1,6 @@
 # System Specification Document
 
-## 2.2.1 Introduction
+## Introduction
 
 ### Project Title
 **Event Booking System**
