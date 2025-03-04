@@ -7,5 +7,5 @@
 | **Venue Manager**     | Manages venue availability and logistics | Real-time venue booking updates, conflict-free scheduling | Overbooked or double-booked venues, no direct communication with organisers | 95% accuracy in venue booking, reduced double-booking incidents |
 | **Payment Provider**  | Processes ticket payments securely | Secure transactions, fraud prevention, low payment failures | High transaction failures, delayed fund transfers | Less than 2% transaction failures, full PCI-DSS compliance |
 | **System Administrator** | Maintains platform security and performance | System uptime, data security, bug-free experience | Frequent downtimes, cybersecurity threats, scalability issues | 99.9% uptime, zero security breaches, scalable architecture |
-| **Marketing Team**    | Promotes events to maximize attendance | Effective promotion tools, audience targeting, performance analytics | Limited marketing integration, no analytics for campaigns | 30% increase in marketing ROI, seamless integration with social media platforms |
+| **Marketing Team**    | Promotes events to maximise attendance | Effective promotion tools, audience targeting, performance analytics | Limited marketing integration, no analytics for campaigns | 30% increase in marketing ROI, seamless integration with social media platforms |
 
