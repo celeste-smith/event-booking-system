@@ -21,7 +21,7 @@ The Event Booking System will provide a platform for event organisers to list ev
 |------|------------|--------------------|
 | FR1 | The system shall allow users to search for events by title, date, location, and category. | Search results should be displayed in under 2 seconds. |
 | FR2 | The system shall allow users to register and log in using an email and password. | Users must verify their email before accessing features. |
-| FR3 | The system shall allow event organizers to create and manage event listings. | Organizers can update event details any time before booking closes. |
+| FR3 | The system shall allow event organizers to create and manage event listings. | Organisers can update event details any time before booking closes. |
 | FR4 | The system shall support online ticket booking and payment processing. | Payment confirmation should be received within 10 seconds. |
 | FR5 | The system shall generate digital tickets with QR codes for verification. | QR codes must be scannable at entry points. |
 | FR6 | The system shall notify users via email and SMS about booking confirmations. | Notifications should be sent within 1 minute of booking completion. |
