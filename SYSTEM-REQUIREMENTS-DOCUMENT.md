@@ -48,7 +48,7 @@ The Event Booking System will provide a platform for event organisers to list ev
 
 ### 3.4 Scalability
 - The system shall support 1,000 concurrent users during peak hours.
-- Database queries should be optimized for high-traffic loads.
+- Database queries should be optimised for high-traffic loads.
 
 ### 3.5 Security
 - All user data shall be encrypted using AES-256.
