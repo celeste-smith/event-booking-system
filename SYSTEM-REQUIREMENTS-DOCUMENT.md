@@ -15,3 +15,9 @@ The Event Booking System will provide a platform for event organisers to list ev
 
 ---
 
+## 4. Assumptions and Constraints
+- Users must have an internet connection to access the system.
+- Some features may require third-party integrations (e.g., payment gateways, email services).
+
+## 5. Conclusion
+This document outlines the key functional and non-functional requirements for the Event Booking System to ensure a seamless and secure booking experience for users and event organisers.
