@@ -18,15 +18,15 @@ graph TD;
     K -->|Handle| N[Manage Users];
 
     %% Styling
-    style A fill:#16C5B7,stroke:#16C5B7,stroke-width:2px,font-size:14px;
+    style A fill:#7600bc,stroke:#7600bc,stroke-width:2px,font-size:14px;
     style G fill:#FFA500,stroke:#FFA500,stroke-width:2px,font-size:14px;
     style K fill:#00407a,stroke:#00407a,stroke-width:2px,font-size:14px;
 
-    style B fill:#16C5B7,stroke:#16C5B7;
-    style C fill:#16C5B7,stroke:#16C5B7;
-    style D fill:#16C5B7,stroke:#16C5B7;
-    style E fill:#16C5B7,stroke:#16C5B7;
-    style F fill:#16C5B7,stroke:#16C5B7;
+    style B fill:#7600bc,stroke:#7600bc;
+    style C fill:#7600bc,stroke:#7600bc;
+    style D fill:#7600bc,stroke:#7600bc;
+    style E fill:#7600bc,stroke:#7600bc;
+    style F fill:#7600bc,stroke:#7600bc;
 
     style H fill:#FFA500,stroke:#FFA500;
     style I fill:#FFA500,stroke:#FFA500;
