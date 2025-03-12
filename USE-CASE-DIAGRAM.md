@@ -20,7 +20,7 @@ graph TD;
     %% Styling
     style A fill:#FFDD57,stroke:#E6B800,stroke-width:2px,font-size:14px;
     style G fill:#FF9F68,stroke:#E67E22,stroke-width:2px,font-size:14px;
-    style K fill:#6EB5FF,stroke:#3498DB,stroke-width:2px,font-size:14px;
+    style K fill:#00407a,stroke:#00407a,stroke-width:2px,font-size:14px;
 
     style B fill:#F7DC6F,stroke:#E6B800;
     style C fill:#F7DC6F,stroke:#E6B800;
@@ -33,8 +33,8 @@ graph TD;
     style J fill:#FFA07A,stroke:#E67E22;
 
     style L fill:#85C1E9,stroke:#3498DB;
-    style M fill:#85C1E9,stroke:#3498DB;
-    style N fill:#85C1E9,stroke:#3498DB;
+    style M fill:#00407a,stroke:#00407a;
+    style N fill:#00407a,stroke:#00407a;
 ```
 
 
