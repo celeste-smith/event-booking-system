@@ -32,7 +32,7 @@ graph TD;
     style I fill:#FFA07A,stroke:#E67E22;
     style J fill:#FFA07A,stroke:#E67E22;
 
-    style L fill:#85C1E9,stroke:#3498DB;
+    style L fill:#00407a,stroke:#00407a;
     style M fill:#00407a,stroke:#00407a;
     style N fill:#00407a,stroke:#00407a;
 ```
