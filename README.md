@@ -56,3 +56,6 @@ This Kanban board is designed to track the development process of the Event Book
 ## Screenshot
 ![Kanban Board](https://github.com/celeste-smith/event-booking-system/blob/main/kanban-board.png)
 
+Link to my Kanban (project) Board:
+https://github.com/users/celeste-smith/projects/3/views/1
+
