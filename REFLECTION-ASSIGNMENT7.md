@@ -1,1 +1,2 @@
-
+## 1. Overview
+In the beginning of starting this assignment, it became overwhelming as I have not worked on a Kanban Board before, particularly in GitHub. I realised after that it is very similar to a physical scrum or task board and with doing some research as to how the tool work in GitHub, I found it actually quite easy. In Assignment 6, I created the issues and soon realised that I needed to create the labels that was required that is not defaulted in GitHub to link it to the issues and the same went for the Milestones. And these I linked to my Project - Kanban Board. 
