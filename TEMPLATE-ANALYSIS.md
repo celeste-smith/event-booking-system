@@ -11,6 +11,18 @@ GitHub provides different project templates for managing workflows. For the Even
 | **Automated Kanban** | Issues move automatically based on status changes | Reduces manual task movement | Can be restrictive if custom workflows are needed |
 | **Automated Kanban with Reviews** | Includes review columns for better approval tracking | Useful for code review processes | More complex than needed for an event booking system |
 
+## GitHub Project Templates Comparison
+
+| Feature               | Basic Kanban               | Automated Kanban          | Scrum Board               |
+|-----------------------|---------------------------|---------------------------|---------------------------|
+| **Columns/Workflows** | To Do, In Progress, Done  | To Do, In Progress, Done  | Backlog, Sprint, In Progress, Review, Done |
+| **Automation Features** | None                      | Auto-moves issues based on PR status, auto-closes completed issues | Auto-moves items through Sprint workflow, integrates with issues |
+| **Agile Suitability** | Basic task tracking       | Good for continuous integration (CI/CD) | Best for Agile/Scrum teams using sprints |
+| **Best Use Case**    | Simple task management    | Development workflows with automation | Agile teams following sprint-based development |
+
+Each template serves different needs, with **Basic Kanban** offering simplicity, **Automated Kanban** streamlining development tasks, and **Scrum Board** providing structured Agile support.
+
+
 ## 3. Selected Template: Automated Custom Kanban with Reviews
 ### **Justification:**
 - Included review column for better approval tracking. 
