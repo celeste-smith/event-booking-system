@@ -54,5 +54,5 @@ This Kanban board is designed to track the development process of the Event Book
 - Team members are assigned tasks using `@mentions` for clear responsibility allocation.
 
 ## Screenshot
-![Kanban Board](kanban-board.png)
+![Kanban Board](https://github.com/celeste-smith/event-booking-system/blob/main/kanban-board.png)
 
