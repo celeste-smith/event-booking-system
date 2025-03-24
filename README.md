@@ -1,5 +1,34 @@
-# Event Booking System – (Name of Booking System: Event Hub)
+# Event Booking Development - Kanban Board
 
+## Overview
+This Kanban board is designed to track the development process of the Event Booking System project. It helps manage tasks efficiently by organizing user stories into different stages of the development lifecycle.
+
+## Customization Choices
+
+### Added Columns
+- **Product Backlog**: Stores user stories and tasks that are planned for future sprints.
+- **Sprint Backlog**: Contains selected tasks that are part of the current sprint.
+- **In Progress/Development**: Tracks tasks actively being worked on.
+- **Testing & Review**: Tasks awaiting testing, approval, or code review.
+- **Done**: Completed tasks that have been reviewed and approved.
+
+### Linked Issues & Labels
+- Each user story is linked to an issue from the repository.
+- Issues are labeled appropriately (e.g., `feature`, `bug`) to categorize tasks effectively.
+
+### Task Assignments
+- Team members are assigned tasks using `@mentions` for clear responsibility allocation.
+
+## Screenshot
+![Kanban Board](https://github.com/celeste-smith/event-booking-system/blob/main/kanban-board.png)
+
+## Link to my Kanban (project) Board:
+https://github.com/users/celeste-smith/projects/3/views/1
+
+
+
+
+# Event Booking System – (Name of Booking System: Event Hub)
 
 ## Introduction
 The **Event Booking System (Event Hub)** is a web-based platform that allows users to browse, book, and manage event tickets. It streamlines the event reservation process, providing an efficient way for users to book seats for an event. 
@@ -32,30 +61,4 @@ This repository includes the following files:
 
 
 
-# Event Booking Development - Kanban Board
-
-## Overview
-This Kanban board is designed to track the development process of the Event Booking System project. It helps manage tasks efficiently by organizing user stories into different stages of the development lifecycle.
-
-## Customization Choices
-
-### Added Columns
-- **Product Backlog**: Stores user stories and tasks that are planned for future sprints.
-- **Sprint Backlog**: Contains selected tasks that are part of the current sprint.
-- **In Progress/Development**: Tracks tasks actively being worked on.
-- **Testing & Review**: Tasks awaiting testing, approval, or code review.
-- **Done**: Completed tasks that have been reviewed and approved.
-
-### Linked Issues & Labels
-- Each user story is linked to an issue from the repository.
-- Issues are labeled appropriately (e.g., `feature`, `bug`) to categorize tasks effectively.
-
-### Task Assignments
-- Team members are assigned tasks using `@mentions` for clear responsibility allocation.
-
-## Screenshot
-![Kanban Board](https://github.com/celeste-smith/event-booking-system/blob/main/kanban-board.png)
-
-## Link to my Kanban (project) Board:
-https://github.com/users/celeste-smith/projects/3/views/1
 
