@@ -3,13 +3,8 @@
 ## 1. Overview
 GitHub provides different project templates for managing workflows. For the Event Booking System, I evaluated the available templates and selected the most suitable one which was the Kanban Board.
 
-## 2. Comparison of GitHub Project Templates
+## 2. GitHub Project Templates Comparison
 
-| Template | Features | Pros | Cons |
-|----------|----------|----------|----------|
-| **Basic Kanban** | Simple columns (To Do, In Progress, Done) | Easy to use, minimal setup | Lacks advanced tracking features |
-| **Automated Kanban** | Issues move automatically based on status changes | Reduces manual task movement | Can be restrictive if custom workflows are needed |
-| **Automated Kanban with Reviews** | Includes review columns for better approval tracking | Useful for code review processes | More complex than needed for an event booking system |
 
 | Feature               | Basic Kanban               | Automated Kanban          | Automated Kanban with Reviews (Scrum Board)               |
 |-----------------------|---------------------------|---------------------------|---------------------------|
