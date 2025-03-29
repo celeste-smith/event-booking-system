@@ -13,3 +13,10 @@ One of the main challenges in selecting a template for the GitHub Project board 
 | **Customization** | Allows column edits, labels, and automation | Highly customizable, but less automation | Advanced workflows with deep customization |
 | **Ease of Use**   | Moderate (learning curve for setup) | Very user-friendly | Can be complex for beginners |
 | **Best For**      | Developers using GitHub | Simple task tracking | Large teams, enterprise projects |
+
+
+- **Trello** is the easiest to use but lacks deep GitHub integration.  
+- **Jira** is ideal for **enterprise-level** teams managing sprints, but it can be overcomplicated for smaller projects.  
+- **GitHub Projects** is the best option for **developers working directly with GitHub Issues**, making it an ideal choice for version control and continuous development workflows.  
+
+Ultimately, GitHub Projects was chosen because of its **seamless GitHub Issue linking, automation options, and direct integration with code repositories**, making it the most efficient tool for this assignment.
