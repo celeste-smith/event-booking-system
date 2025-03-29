@@ -1,6 +1,9 @@
 # Kanban Board Setup and Explanation
 
 ## 1. Overview
+
+A Kanban board is a visual workflow management tool that helps manage work by displaying tasks arranged in columns, where each column represents a different development stage of the process making it easy for teams to track workflow and identify bottlenecks and to see what needs to be done, what’s in progress, and what’s completed, making it easier to track workflow and identify bottlenecks.
+
 My  GitHub **Kanban Board** was created to manage the development of the **Event Booking System (EventHub)**, following the **Sprint Plan** from Assignment 6.
 
 ## 2. Column Setup
