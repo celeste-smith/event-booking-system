@@ -6,3 +6,10 @@ One of the main challenges in selecting a template for the GitHub Project board 
 
 - **Adding a "Testing & Review" column** to account for the QA phase before marking tasks as complete.  
 - **Defining task priorities and statuses** clearly to ensure better visibility of ongoing work.  
+
+| Feature            | GitHub Projects        | Trello                | Jira                   |
+|--------------------|-----------------------|-----------------------|------------------------|
+| **Integration**   | Best for GitHub repos  | Standalone, but integrates with other tools  | Great for complex workflows (Scrum, Kanban) |
+| **Customization** | Allows column edits, labels, and automation | Highly customizable, but less automation | Advanced workflows with deep customization |
+| **Ease of Use**   | Moderate (learning curve for setup) | Very user-friendly | Can be complex for beginners |
+| **Best For**      | Developers using GitHub | Simple task tracking | Large teams, enterprise projects |
