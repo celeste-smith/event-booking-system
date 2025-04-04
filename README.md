@@ -75,16 +75,19 @@ These diagrams depict how key objects transition between different states:
 To see these diagrams, you can view it here: **[State Transition Diagrams](/STATE-TRANSITION-DIAGRAMS.md)**
 
 ##Activity Workflow Diagrams
+
 These diagrams illustrate the workflows involved in various booking system processes:
 
-- **[Booking Process](diagrams/booking_process.md)**
-- **[Payment Processing](diagrams/payment_workflow.md)**
-- **[Cancel Booking Workflow](diagrams/cancel_booking.md)**
-- **[User Registration](diagrams/user_registration.md)**
-- **[Admin Approves Service](diagrams/admin_approve_service.md)**
-- **[User Leaves a Review](diagrams/user_review.md)**
-- **[Refund Process](diagrams/refund_workflow.md)**
-- **[Notification Workflow](diagrams/notification_workflow.md)**
+- **Booking Process**
+- **Payment Processing**
+- **Cancel Booking Workflow**
+- **User Registration**
+- **Admin Approves Service**
+- **User Leaves a Review**
+- **Refund Process**
+- **Notification Workflow**
+
+To see these diagrams, you can view it here: **[State Transition Diagrams](/ACTIVITY-DIAGRAMS.md)**
 
 ##Traceability to Functional Requirements & User Stories
 This section maps system requirements and user stories to their corresponding state and activity diagrams.
