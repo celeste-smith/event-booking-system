@@ -21,7 +21,25 @@ graph TD
 
 ---
 
-## 2. Booking an Event Ticket
+## 2. Search for Events
+### Activity Diagram
+```mermaid
+graph TD;
+  Start -->|User enters search query| CheckDatabase;
+  CheckDatabase -->|Results found?| ShowResults{Results?};
+  ShowResults -- Yes --> DisplayEvents;
+  ShowResults -- No --> ShowNoResults;
+  DisplayEvents --> End;
+```
+### Explanation
+- **Actors**: User, System
+- **Steps**: Search event database and display results.
+- **Stakeholder Impact**: Enhances user experience with efficient search.
+
+---
+
+
+## 3. Booking an Event Ticket
 
 ```mermaid
 graph TD
@@ -40,7 +58,7 @@ graph TD
 
 ---
 
-## 3. Payment Processing
+## 4. Payment Processing
 
 ```mermaid
 graph TD
@@ -58,7 +76,7 @@ graph TD
 
 ---
 
-## 4. Sending Booking Confirmation
+## 5. Sending Booking Confirmation
 
 ```mermaid
 graph TD
@@ -74,7 +92,7 @@ graph TD
 
 ---
 
-## 5. Managing Event Details (Create/Edit)
+## 6. Managing Event Details (Create/Edit)
 
 ```mermaid
 graph TD
@@ -92,7 +110,7 @@ graph TD
 
 ---
 
-## 6. Handling Cancellations and Refunds
+## 7. Handling Cancellations and Refunds
 
 ```mermaid
 graph TD
@@ -110,7 +128,25 @@ graph TD
 
 ---
 
-## 7. Viewing Ticket Sales Reports
+## 8. Manage User Accounts
+### Activity Diagram
+```mermaid
+graph TD;
+  Start -->|Admin selects user| ChooseAction;
+  ChooseAction -->|Update details?| UpdateAccount;
+  ChooseAction -->|Deactivate account?| DeactivateUser;
+  UpdateAccount --> End;
+  DeactivateUser --> End;
+```
+### Explanation
+- **Actors**: Admin
+- **Steps**: Admin can update or deactivate user accounts.
+- **Stakeholder Impact**: Enhances system control and security.
+
+---
+
+
+## 9. Viewing Ticket Sales Reports
 
 ```mermaid
 graph TD
@@ -128,7 +164,7 @@ graph TD
 
 ---
 
-## 8. Monitoring System Uptime
+## 10. Monitoring System Uptime
 
 ```mermaid
 graph TD
