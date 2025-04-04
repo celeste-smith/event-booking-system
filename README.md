@@ -65,7 +65,7 @@ This repository contains state transition diagrams and activity workflow diagram
 ##State Transition Diagrams
 These diagrams depict how key objects transition between different states:
 
-- **[Booking Lifecycle](diagrams/booking_state.md)**
+- **[Booking Lifecycle](diagrams/STATE-TRANSITION-DIAGRAMS.md)**
 - **[Payment Lifecycle](diagrams/payment_state.md)**
 - **[User Account Lifecycle](diagrams/user_account_state.md)**
 - **[Service Request Lifecycle](diagrams/service_request_state.md)**
