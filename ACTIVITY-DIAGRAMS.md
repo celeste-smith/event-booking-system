@@ -1,138 +1,147 @@
 # Activity Workflow Modeling
 
+This document contains **UML activity diagrams** for eight key workflows in the system, along with explanations of their process flows, decisions, and parallel actions.
+
 ## 1. User Registration
-### Activity Diagram
+
 ```mermaid
-graph TD;
-  Start -->|User enters details| ValidateUser;
-  ValidateUser -->|Valid?| CreateAccount{Valid Details?};
-  CreateAccount -- Yes --> SendVerification;
-  SendVerification -->|User verifies email| AccountActivated;
-  CreateAccount -- No --> DisplayError;
-  AccountActivated --> End;
+graph TD
+    A(Start) --> B[User Enters Registration Details]
+    B --> C[Validate Inputs]
+    C -->|Valid| D[Create User Account]
+    C -->|Invalid| E[Show Error Message]
+    D --> F[Send Confirmation Email]
+    F --> G(End)
 ```
+
 ### Explanation
-- **Actors**: User, System
-- **Steps**: User enters details, system validates, sends email verification, activates account.
-- **Stakeholder Impact**: Ensures only verified users can book events.
+- Ensures user inputs are validated before account creation.
+- Sends a confirmation email upon successful registration.
+- Addresses stakeholder concerns about security and usability.
 
 ---
 
-## 2. Search for Events
-### Activity Diagram
+## 2. Booking an Event Ticket
+
 ```mermaid
-graph TD;
-  Start -->|User enters search query| CheckDatabase;
-  CheckDatabase -->|Results found?| ShowResults{Results?};
-  ShowResults -- Yes --> DisplayEvents;
-  ShowResults -- No --> ShowNoResults;
-  DisplayEvents --> End;
+graph TD
+    A(Start) --> B[User Selects Event]
+    B --> C[Choose Ticket Type & Quantity]
+    C --> D[Proceed to Payment]
+    D --> E[Confirm Booking]
+    E --> F[Send Ticket Email]
+    F --> G(End)
 ```
+
 ### Explanation
-- **Actors**: User, System
-- **Steps**: Search event database and display results.
-- **Stakeholder Impact**: Enhances user experience with efficient search.
+- Ensures smooth booking flow.
+- Users must confirm details before payment.
+- Automated email reduces manual work.
 
 ---
 
-## 3. Book a Ticket
-### Activity Diagram
+## 3. Payment Processing
+
 ```mermaid
-graph TD;
-  Start -->|User selects event| ChooseSeats;
-  ChooseSeats -->|User confirms selection| ProceedToPayment;
-  ProceedToPayment -->|Payment Successful?| PaymentStatus{Payment Successful?};
-  PaymentStatus -- Yes --> GenerateTicket;
-  PaymentStatus -- No --> ShowPaymentError;
-  GenerateTicket --> End;
+graph TD
+    A(Start) --> B[User Enters Payment Details]
+    B --> C[Validate Payment Info]
+    C -->|Valid| D[Process Payment]
+    C -->|Invalid| E[Show Payment Error]
+    D --> F[Send Payment Confirmation]
+    F --> G(End)
 ```
+
 ### Explanation
-- **Actors**: User, Payment System
-- **Steps**: User selects seats, completes payment, receives ticket.
-- **Stakeholder Impact**: Secure and seamless booking process.
+- Ensures security and validation before processing payments.
+- Directly aligns with user concerns about failed transactions.
 
 ---
 
-## 4. Receive Booking Confirmation
-### Activity Diagram
+## 4. Sending Booking Confirmation
+
 ```mermaid
-graph TD;
-  Start -->|User completes booking| GenerateEmail;
-  GenerateEmail -->|System sends confirmation| EmailSent;
-  EmailSent --> End;
+graph TD
+    A(Start) --> B[Confirm Payment]
+    B --> C[Generate Booking ID]
+    C --> D[Send Confirmation Email]
+    D --> E(End)
 ```
+
 ### Explanation
-- **Actors**: System, User
-- **Steps**: Booking confirmation email is sent after successful payment.
-- **Stakeholder Impact**: Provides proof of purchase for users.
+- Ensures customers receive instant booking confirmation.
+- Automated emails prevent manual errors.
 
 ---
 
-## 5. Create a New Event
-### Activity Diagram
+## 5. Managing Event Details (Create/Edit)
+
 ```mermaid
-graph TD;
-  Start -->|Organiser enters details| ValidateEvent;
-  ValidateEvent -->|Event details valid?| EventStatus{Valid?};
-  EventStatus -- Yes --> PublishEvent;
-  EventStatus -- No --> ShowError;
-  PublishEvent --> End;
+graph TD
+    A(Start) --> B[Admin Logs In]
+    B --> C[Create/Edit Event Details]
+    C --> D[Validate Data]
+    D -->|Valid| E[Save Event]
+    D -->|Invalid| F[Show Error Message]
+    E --> G(End)
 ```
+
 ### Explanation
-- **Actors**: Event Organiser, System
-- **Steps**: Organisers submit event details, system validates, publishes event.
-- **Stakeholder Impact**: Ensures only complete and valid events are published.
+- Ensures event details are accurate before saving.
+- Admins can edit details if needed.
 
 ---
 
-## 6. Manage User Accounts
-### Activity Diagram
+## 6. Handling Cancellations and Refunds
+
 ```mermaid
-graph TD;
-  Start -->|Admin selects user| ChooseAction;
-  ChooseAction -->|Update details?| UpdateAccount;
-  ChooseAction -->|Deactivate account?| DeactivateUser;
-  UpdateAccount --> End;
-  DeactivateUser --> End;
+graph TD
+    A(Start) --> B[User Requests Cancellation]
+    B --> C[Verify Refund Eligibility]
+    C -->|Eligible| D[Process Refund]
+    C -->|Not Eligible| E[Notify User]
+    D --> F[Send Refund Confirmation]
+    F --> G(End)
 ```
+
 ### Explanation
-- **Actors**: Admin
-- **Steps**: Admin can update or deactivate user accounts.
-- **Stakeholder Impact**: Enhances system control and security.
+- Ensures cancellations follow business rules.
+- Refund processing reduces user complaints.
 
 ---
 
-## 7. Process Payments and Refunds
-### Activity Diagram
+## 7. Viewing Ticket Sales Reports
+
 ```mermaid
-graph TD;
-  Start -->|User submits payment| VerifyPayment;
-  VerifyPayment -->|Valid?| PaymentApproved{Payment Valid?};
-  PaymentApproved -- Yes --> ProcessTransaction;
-  PaymentApproved -- No --> ShowPaymentError;
-  ProcessTransaction --> End;
+graph TD
+    A(Start) --> B[Admin Logs In]
+    B --> C[Select Report Type]
+    C --> D[Fetch Data from Database]
+    D --> E[Generate Report]
+    E --> F[Display Report to Admin]
+    F --> G(End)
 ```
+
 ### Explanation
-- **Actors**: User, Payment System
-- **Steps**: Payment is verified and processed, or an error is shown.
-- **Stakeholder Impact**: Secure transactions reduce fraud risk.
+- Ensures admin access to critical sales data.
+- Helps event organizers make data-driven decisions.
 
 ---
 
-## 8. Monitor System Performance
-### Activity Diagram
+## 8. Monitoring System Uptime
+
 ```mermaid
-graph TD;
-  Start -->|System logs metrics| AnalyzePerformance;
-  AnalyzePerformance -->|Issue detected?| PerformanceStatus{Issue Found?};
-  PerformanceStatus -- Yes --> AlertAdmin;
-  PerformanceStatus -- No --> ContinueMonitoring;
-  AlertAdmin --> End;
-  ContinueMonitoring --> End;
+graph TD
+    A(Start) --> B[System Health Check]
+    B --> C[Monitor Server Status]
+    C -->|Server Down| D[Trigger Alert]
+    C -->|Server Up| E[Continue Monitoring]
+    D --> F[Send Alert to Admin]
+    F --> G(End)
 ```
+
 ### Explanation
-- **Actors**: System, Admin
-- **Steps**: System monitors performance, detects issues, alerts admin.
-- **Stakeholder Impact**: Ensures system reliability and uptime.
+- Ensures real-time monitoring of system performance.
+- Alerts admins to downtime issues immediately.
 
 ---
