@@ -89,7 +89,7 @@ These diagrams illustrate the workflows involved in various booking system proce
 - **Refund Process**
 - **Notification Workflow**
 
-To see these diagrams, you can view it here: **[State Transition Diagrams](/ACTIVITY-DIAGRAMS.md)**
+To see these diagrams, you can view it here: **[Activity Diagrams](/ACTIVITY-DIAGRAMS.md)**
 
 ##Traceability to Functional Requirements & User Stories
 This section maps system requirements and user stories to their corresponding state and activity diagrams.
