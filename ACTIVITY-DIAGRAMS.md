@@ -1,6 +1,6 @@
 # Activity Workflow Modeling
 
-This document contains **UML activity diagrams** for eight key workflows in the system, along with explanations of their process flows, decisions, and parallel actions.
+This document contains **UML activity diagrams** for key workflows in the system, along with explanations of their process flows, decisions, and parallel actions.
 
 ## 1. User Registration
 
@@ -15,14 +15,13 @@ graph TD
 ```
 
 ### Explanation
-- Ensures user inputs are validated before account creation.
-- Sends a confirmation email upon successful registration.
-- Addresses stakeholder concerns about security and usability.
+- **Key States & Transitions**: The process starts with user input validation, followed by account creation and email confirmation.
+- **Stakeholder Concerns**: Ensures secure and error-free user registrations while preventing invalid data from entering the system.
 
 ---
 
 ## 2. Search for Events
-### Activity Diagram
+
 ```mermaid
 graph TD;
   Start -->|User enters search query| CheckDatabase;
@@ -31,13 +30,12 @@ graph TD;
   ShowResults -- No --> ShowNoResults;
   DisplayEvents --> End;
 ```
+
 ### Explanation
-- **Actors**: User, System
-- **Steps**: Search event database and display results.
-- **Stakeholder Impact**: Enhances user experience with efficient search.
+- **Key States & Transitions**: Searches the database and displays events if found; otherwise, an error is shown.
+- **Stakeholder Concerns**: Improves user experience by ensuring a fast and efficient search mechanism.
 
 ---
-
 
 ## 3. Booking an Event Ticket
 
@@ -52,9 +50,8 @@ graph TD
 ```
 
 ### Explanation
-- Ensures smooth booking flow.
-- Users must confirm details before payment.
-- Automated email reduces manual work.
+- **Key States & Transitions**: The user selects an event, chooses tickets, proceeds to payment, and receives confirmation.
+- **Stakeholder Concerns**: Ensures seamless booking and reduces errors in ticketing.
 
 ---
 
@@ -71,8 +68,8 @@ graph TD
 ```
 
 ### Explanation
-- Ensures security and validation before processing payments.
-- Directly aligns with user concerns about failed transactions.
+- **Key States & Transitions**: Payment details are validated before processing; errors prompt users for corrections.
+- **Stakeholder Concerns**: Prevents failed transactions and ensures secure payments.
 
 ---
 
@@ -87,8 +84,8 @@ graph TD
 ```
 
 ### Explanation
-- Ensures customers receive instant booking confirmation.
-- Automated emails prevent manual errors.
+- **Key States & Transitions**: After successful payment, a booking ID is generated, and a confirmation email is sent.
+- **Stakeholder Concerns**: Ensures immediate feedback and avoids booking confusion.
 
 ---
 
@@ -105,8 +102,8 @@ graph TD
 ```
 
 ### Explanation
-- Ensures event details are accurate before saving.
-- Admins can edit details if needed.
+- **Key States & Transitions**: Admins can create/edit events, ensuring valid data before saving.
+- **Stakeholder Concerns**: Provides flexibility and prevents invalid event details from being saved.
 
 ---
 
@@ -123,13 +120,13 @@ graph TD
 ```
 
 ### Explanation
-- Ensures cancellations follow business rules.
-- Refund processing reduces user complaints.
+- **Key States & Transitions**: The system checks refund eligibility before processing or notifying the user.
+- **Stakeholder Concerns**: Ensures refunds follow event policies, reducing user complaints.
 
 ---
 
 ## 8. Manage User Accounts
-### Activity Diagram
+
 ```mermaid
 graph TD;
   Start -->|Admin selects user| ChooseAction;
@@ -138,13 +135,12 @@ graph TD;
   UpdateAccount --> End;
   DeactivateUser --> End;
 ```
+
 ### Explanation
-- **Actors**: Admin
-- **Steps**: Admin can update or deactivate user accounts.
-- **Stakeholder Impact**: Enhances system control and security.
+- **Key States & Transitions**: Admins can update user details or deactivate accounts.
+- **Stakeholder Concerns**: Enhances user management and security within the system.
 
 ---
-
 
 ## 9. Viewing Ticket Sales Reports
 
@@ -159,8 +155,8 @@ graph TD
 ```
 
 ### Explanation
-- Ensures admin access to critical sales data.
-- Helps event organizers make data-driven decisions.
+- **Key States & Transitions**: Admins log in, fetch ticket sales data, and generate reports.
+- **Stakeholder Concerns**: Provides event organizers with critical sales insights for decision-making.
 
 ---
 
@@ -177,7 +173,5 @@ graph TD
 ```
 
 ### Explanation
-- Ensures real-time monitoring of system performance.
-- Alerts admins to downtime issues immediately.
-
----
+- **Key States & Transitions**: The system continuously monitors uptime and alerts admins if downtime occurs.
+- **Stakeholder Concerns**: Ensures real-time system reliability and performance monitoring.
