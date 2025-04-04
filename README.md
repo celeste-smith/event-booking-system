@@ -80,10 +80,12 @@ These diagrams illustrate the workflows involved in various booking system proce
 
 - **Booking Process**
 - **Payment Processing**
+- **Search for Event**
 - **Cancel Booking Workflow**
 - **User Registration**
 - **Admin Approves Service**
 - **User Leaves a Review**
+- **Manage user accounts**
 - **Refund Process**
 - **Notification Workflow**
 
