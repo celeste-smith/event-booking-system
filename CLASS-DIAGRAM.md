@@ -87,3 +87,8 @@ classDiagram
     Event "1" --> "1" Venue : held at
     User "1" --> "0..*" Notification : receives
     Admin <|-- User : inheritance
+
+```
+
+
+
