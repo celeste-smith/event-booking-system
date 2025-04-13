@@ -16,7 +16,8 @@ This domain model outlines the key entities, their attributes, methods, relation
 | Notification (System messages sent to users (e.g., confirmation, updates)) | `notificationId`: String, `userId`: String, `message`: String, `sentAt`: DateTime, `readStatus`: Boolean                     | sendNotification(), markAsRead()                         | Sent to Users                                                        |
 | Venue (A physical location where an event is held)        | `venueId`: String, `name`: String, `address`: String, `capacity`: int                                           | `addVenue()`, `updateVenue()`,  `isAvailable()`                | Linked to Events                                                     |
 | Ticket (Represents the confirmation of an event booking)       | `ticketId`: String, `seatNumber`: String, `issuedAt`: DateTime, `status`: Enum (Valid, Used, Cancelled)                            | `generateTicket()`, `cancelTicket()`, `validateEntry()`      | Generated for a Booking                                              |
-
+| Review (Represents the confirmation of an event booking)       | `reviewId`: String, `userId`: String, `eventId`: String, `rating`: int, `comment`: String, `reviewDate`: DateTime                           | `addReview()`, `editReview()`, `deleteReview()`     |  Written by 1 User. Linked to 1 Event.                                          |
+                                           
 ---
 
 ##Business Rules
