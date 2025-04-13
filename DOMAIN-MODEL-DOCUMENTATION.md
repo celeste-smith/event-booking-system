@@ -15,7 +15,7 @@ This domain model outlines the key entities, their attributes, methods, relation
 | Payment (Represents a financial transaction related to a booking)      | `paymentId`: String, `bookingId`: String, `amount`: double, `paymentMethod`: Enum (Card, EFT, etc.), `status`: Enum (Pending, Paid, Failed)          | `processPayment()`, `refundPayment()`,  `validatePayment()`                              | Associated with a Booking                                            |
 | Notification (System messages sent to users (e.g., confirmation, updates)) | `notificationId`: String, `userId`: String, `message`: String, `sentAt`: DateTime, `readStatus`: Boolean                     | sendNotification(), markAsRead()                         | Sent to Users                                                        |
 | Venue (A physical location where an event is held)        | `venueId`: String, `name`: String, `address`: String, `capacity`: int                                           | `addVenue()`, `updateVenue()`,  `isAvailable()`                | Linked to Events                                                     |
-| Ticket        | ticketId, bookingId, qrCode, seatNumber, status                            | generateTicket(), validateTicket(), cancelTicket()       | Generated for a Booking                                              |
+| Ticket (Represents the confirmation of an event booking)       | `ticketId`: String, `seatNumber`: String, `issuedAt`: DateTime, `status`: Enum (Valid, Used, Cancelled)                            | `generateTicket()`, `cancelTicket()`, `validateEntry()`      | Generated for a Booking                                              |
 
 ---
 
