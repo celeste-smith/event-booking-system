@@ -20,6 +20,6 @@ Assignment 6's Agile sprint tasks helped prioritize which classes were most crit
 Finally, Assignment 8's activity and state diagrams helped visualize how these classes change state and interact. For example, the state of a `Booking` transitions from `Pending` to `Confirmed` to `Cancelled`, which validated the lifecycle logic built into the `Booking` class.
 
 
-### 4. Lessons Learned About Object-Oriented Design
+### 3. Lessons Learned About Object-Oriented Design
 
 Modeling the domain forced me to think like both a developer and a system analyst. I had to balance technical soundness with real-world business requirements, stakeholder needs, and system goals. This reflection process helped cement how essential domain modeling is in the early stages of software design.
