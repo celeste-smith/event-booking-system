@@ -1,32 +1,40 @@
 <?php
 
-require_once __DIR__ . '/../src/User.php';
-require_once __DIR__ . '/../src/Admin.php';
-require_once __DIR__ . '/../src/Customer.php';
+require_once 'User.php';
+require_once 'Customer.php';
+require_once 'Admin.php';
 
+/**
+ * Simple Factory to create User instances
+ */
 class UserFactory
 {
-    public static function createUser(string $type, array $userData): User
+    /**
+     * Create a User object based on type
+     *
+     * @param string $type The type of user to create ('customer', 'admin')
+     * @param array $data Optional user data (like name, email, etc.)
+     * @return User|null Returns an instance of User or null if type is invalid
+     */
+    public static function createUser(string $type, array $data = []): ?User
     {
         switch (strtolower($type)) {
-            case 'admin':
-                return new Admin(
-                    $userData['id'] ?? null,
-                    $userData['name'],
-                    $userData['email'],
-                    $userData['password']
-                );
-
             case 'customer':
                 return new Customer(
-                    $userData['id'] ?? null,
-                    $userData['name'],
-                    $userData['email'],
-                    $userData['password']
+                    $data['id'] ?? null,
+                    $data['name'] ?? '',
+                    $data['email'] ?? '',
+                    $data['password'] ?? ''
                 );
-
+            case 'admin':
+                return new Admin(
+                    $data['id'] ?? null,
+                    $data['name'] ?? '',
+                    $data['email'] ?? '',
+                    $data['password'] ?? ''
+                );
             default:
-                throw new Exception("Invalid user type: " . $type);
+                return null;
         }
     }
 }
