@@ -1,3 +1,52 @@
+#Reflection on Assignment 10
+
+##Justification for Creational Patterns Used
+
+This project implements the six main creational patterns as part of Assignment 10:
+In the development of the Event Booking System, we employed six creational design patterns to enhance flexibility, scalability, and maintainability. These patterns abstract the instantiation process, making the system independent of how its objects are created, composed, and represented.
+
+## 1. Simple Factory Pattern
+
+- **Use Case:** Creating different types of users (e.g., Attendee, Organiser, Admin) and events (e.g., Conference, Workshop, Webinar).
+
+- **Justification:** The Simple Factory Pattern centralizes object creation, providing a single point of control. This promotes code reusability and simplifies maintenance by encapsulating the instantiation logic.
+
+## 2. Factory Method Pattern
+
+- **Use Case:** Allowing subclasses to decide which class to instantiate for creating specific event types.
+
+- **Justification:** The Factory Method Pattern defines an interface for creating an object but lets subclasses alter the type of objects that will be created. This promotes flexibility and adheres to the Open/Closed Principle.
+
+## 3. Abstract Factory Pattern
+
+- **Use Case:** Generating families of related objects, such as UI components (buttons, forms) tailored for different platforms or themes.
+
+- **Justification:** The Abstract Factory Pattern provides an interface for creating families of related or dependent objects without specifying their concrete classes. This ensures consistency among products and supports the addition of new product families without altering existing code.
+
+## 4. Builder Pattern
+
+- **Use Case:** Constructing complex event objects with various optional parameters (e.g., venue, speakers, schedule).
+
+- **Justification:** The Builder Pattern separates the construction of a complex object from its representation, allowing the same construction process to create different representations. This is ideal for creating event objects that require multiple optional components, providing clarity and flexibility in object creation.
+
+## 5. Prototype Pattern
+
+- **Use Case:** Cloning existing event templates for creating new events with similar configurations.
+
+- **Justification:** The Prototype Pattern allows for creating new objects by copying existing ones, which is more efficient than creating new instances from scratch. This is beneficial when new events share many attributes with existing templates, reducing redundancy and potential errors.
+
+## 6. Singleton Pattern
+
+- **Use Case:** Managing the database connection and configuration settings.
+
+- **Justification:** The Singleton Pattern ensures that a class has only one instance and provides a global point of access to it. This is particularly useful for managing shared resources like database connections, ensuring consistent access and preventing conflicts.
+
+---
+
+By integrating these creational design patterns, the Event Booking System achieves a modular and extensible architecture, facilitating easier maintenance and scalability as the system evolves.
+
+
+
 # Reflection on Assignment 8
 
 ## 1. Challenges in Choosing Granularity for States/Actions
