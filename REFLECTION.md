@@ -1,6 +1,6 @@
-#Reflection on Assignment 10
+# Reflection on Assignment 10
 
-##Justification for Creational Patterns Used
+## Justification for Creational Patterns Used
 
 This project implements the six main creational patterns as part of Assignment 10:
 In the development of the Event Booking System, we employed six creational design patterns to enhance flexibility, scalability, and maintainability. These patterns abstract the instantiation process, making the system independent of how its objects are created, composed, and represented.
