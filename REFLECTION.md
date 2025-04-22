@@ -1,5 +1,76 @@
 # Reflection on Assignment 10
 
+## Challenges I faces with Assignment 10: 
+
+I ran into issues running the coverage test and struggled to get it to run. The errors I got states that there are no classes defined but all classes listed in the errors are defined. And it is set up correctly. These were the errors I got:
+
+There were 13 errors:
+
+1) AbstractFactoryTest::testWebUIButton
+Error: Class "WebUIFactory" not found
+
+C:\Users\marinusc\Documents\event-booking-system\tests\AbstractFactoryTest.php:9
+
+2) AbstractFactoryTest::testWebUIForm
+Error: Class "WebUIFactory" not found
+
+C:\Users\marinusc\Documents\event-booking-system\tests\AbstractFactoryTest.php:23
+
+3) AbstractFactoryTest::testMobileUIForm
+Error: Class "MobileUIFactory" not found
+
+C:\Users\marinusc\Documents\event-booking-system\tests\AbstractFactoryTest.php:30
+
+4) AbstractFactoryTest::testMobileUIButton
+Error: Class "MobileUIFactory" not found
+
+C:\Users\marinusc\Documents\event-booking-system\tests\AbstractFactoryTest.php:16
+
+5) BuilderTest::testBuildEvent
+Error: Class "EventBuilder" not found
+
+C:\Users\marinusc\Documents\event-booking-system\tests\BuilderTest.php:9
+
+6) BuilderTest::testBuildEventWithCustomBehavior
+Error: Class "EventBuilder" not found
+
+C:\Users\marinusc\Documents\event-booking-system\tests\BuilderTest.php:20
+
+7) FactoryMethodTest::testCreateCreditCardProcessor
+Error: Class "PaymentProcessorFactory" not found
+
+C:\Users\marinusc\Documents\event-booking-system\tests\FactoryMethodTest.php:9
+
+8) FactoryMethodTest::testCreatePayPalProcessor
+Error: Class "PaymentProcessorFactory" not found
+
+C:\Users\marinusc\Documents\event-booking-system\tests\FactoryMethodTest.php:15
+
+9) FactoryMethodTest::testCreateDebitCardProcessor
+Error: Class "PaymentProcessorFactory" not found
+
+C:\Users\marinusc\Documents\event-booking-system\tests\FactoryMethodTest.php:21
+
+10) PrototypeTest::testCloneConcertEvent
+Error: Class "ConcertEvent" not found
+
+C:\Users\marinusc\Documents\event-booking-system\tests\PrototypeTest.php:9
+
+11) SimpleFactoryTest::testCreateUser
+Error: Class "UserFactory" not found
+
+C:\Users\marinusc\Documents\event-booking-system\tests\SimpleFactoryTest.php:9
+
+12) SimpleFactoryTest::testCreateCustomer
+Error: Class "UserFactory" not found
+
+C:\Users\marinusc\Documents\event-booking-system\tests\SimpleFactoryTest.php:17
+
+13) SingletonTest::testDatabaseConnectionSingleton
+Error: Class "DatabaseConnection" not found
+
+C:\Users\marinusc\Documents\event-booking-system\tests\SingletonTest.php:9
+
 ## Justification for Creational Patterns Used
 
 This project implements the six main creational patterns as part of Assignment 10:
