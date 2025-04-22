@@ -45,9 +45,9 @@ In the development of the Event Booking System, we employed six creational desig
 
 By integrating these creational design patterns, the Event Booking System achieves a modular and extensible architecture, facilitating easier maintenance and scalability as the system evolves.
 
-## Reflection for Assignment 9 
+# Reflection on Assignment 9 
 
-### 1. Challenges Faced in Designing the Domain Model and Class Diagram
+## 1. Challenges Faced in Designing the Domain Model and Class Diagram
 
 Designing the domain model and class diagram for the Event Booking System was both insightful and complex. One of the most significant challenges I encountered was abstraction—identifying which components of the system should be modeled as domain entities versus what could be represented as mere attributes or actions.
 
@@ -56,7 +56,7 @@ For example, distinguishing between the `Event` and `Venue` initially proved dif
 Defining relationships was another challenge. Inheritance seemed logical for distinguishing between different types of users such as Admin and Customer. However, enforcing meaningful and reusable class hierarchies while keeping the system simple was tricky. There was a strong temptation to overuse inheritance, which I had to intentionally avoid to prevent unnecessary complexity.
 
 
-### 2. Alignment with Previous Assignments
+## 2. Alignment with Previous Assignments
 
 The class diagram aligns closely with work done in previous assignments. From Assignment 4, the functional requirements such as allowing users to register, book events, make payments, and cancel bookings directly influenced the choice and responsibilities of classes like `User`, `Booking`, and `Payment`.
 
