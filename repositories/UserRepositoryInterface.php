@@ -5,8 +5,10 @@ namespace EventBookingSystem\Repositories;
 
 use EventBookingSystem\Entities\User;
 
-interface UserRepositoryInterface extends RepositoryInterface
+interface UserRepositoryInterface
 {
-    // Define any additional methods specific to User entity if needed
+    public function find(int $id): ?User;
+    public function save(User $user): void;
+    public function delete(int $id): void;
+    public function getAll(): array;
 }
-
