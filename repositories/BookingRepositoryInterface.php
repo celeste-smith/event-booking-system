@@ -5,9 +5,11 @@ namespace EventBookingSystem\Repositories;
 
 use EventBookingSystem\Entities\Booking;
 
-interface BookingRepositoryInterface extends RepositoryInterface
+interface BookingRepositoryInterface
 {
-    // Define any additional methods specific to Booking entity if needed
+    public function find(int $id): ?Booking;
+    public function save(Booking $booking): void;
+    public function delete(int $id): void;
+    public function getAll(): array;
 }
-
 
