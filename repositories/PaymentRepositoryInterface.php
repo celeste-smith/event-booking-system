@@ -5,8 +5,10 @@ namespace EventBookingSystem\Repositories;
 
 use EventBookingSystem\Entities\Payment;
 
-interface PaymentRepositoryInterface extends RepositoryInterface
+interface PaymentRepositoryInterface
 {
-    // Define any additional methods specific to Payment entity if needed
+    public function find(int $id): ?Payment;
+    public function save(Payment $payment): void;
+    public function delete(int $id): void;
+    public function getAll(): array;
 }
-
