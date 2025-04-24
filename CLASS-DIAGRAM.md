@@ -1,5 +1,134 @@
 # Class Diagram – Event Booking System
 
+## Updated Class Diagram - As instructed in Assignment 11
+
+```mermaid
+classDiagram
+    direction LR
+
+    class Event {
+        +string id
+        +string name
+        +DateTime date
+        +string venueId
+    }
+
+    class User {
+        +string id
+        +string name
+        +string email
+    }
+
+    class Booking {
+        +string id
+        +string eventId
+        +string userId
+    }
+
+    class Payment {
+        +string id
+        +float amount
+        +string bookingId
+    }
+
+    class Notification {
+        +string id
+        +string message
+        +string userId
+    }
+
+    class Ticket {
+        +string id
+        +string eventId
+        +string seatNumber
+    }
+
+    class Venue {
+        +string id
+        +string name
+        +string address
+    }
+
+    class RepositoryInterface~T, ID~ {
+        <<interface>>
+        +save(T entity)
+        +findById(ID id)
+        +findAll()
+        +update(T entity)
+        +delete(ID id)
+    }
+
+    class EventRepositoryInterface {
+        <<interface>>
+    }
+    EventRepositoryInterface --> RepositoryInterface
+
+    class UserRepositoryInterface {
+        <<interface>>
+    }
+    UserRepositoryInterface --> RepositoryInterface
+
+    class BookingRepositoryInterface {
+        <<interface>>
+    }
+    BookingRepositoryInterface --> RepositoryInterface
+
+    class PaymentRepositoryInterface {
+        <<interface>>
+    }
+    PaymentRepositoryInterface --> RepositoryInterface
+
+    class NotificationRepositoryInterface {
+        <<interface>>
+    }
+    NotificationRepositoryInterface --> RepositoryInterface
+
+    class TicketRepositoryInterface {
+        <<interface>>
+    }
+    TicketRepositoryInterface --> RepositoryInterface
+
+    class VenueRepositoryInterface {
+        <<interface>>
+    }
+    VenueRepositoryInterface --> RepositoryInterface
+
+    class InMemoryEventRepository
+    class InMemoryUserRepository
+    class InMemoryBookingRepository
+    class InMemoryPaymentRepository
+    class InMemoryNotificationRepository
+    class InMemoryTicketRepository
+    class InMemoryVenueRepository
+
+    EventRepositoryInterface <|.. InMemoryEventRepository
+    UserRepositoryInterface <|.. InMemoryUserRepository
+    BookingRepositoryInterface <|.. InMemoryBookingRepository
+    PaymentRepositoryInterface <|.. InMemoryPaymentRepository
+    NotificationRepositoryInterface <|.. InMemoryNotificationRepository
+    TicketRepositoryInterface <|.. InMemoryTicketRepository
+    VenueRepositoryInterface <|.. InMemoryVenueRepository
+
+    class RepositoryFactory {
+        +getEventRepository(string type)
+        +getUserRepository(string type)
+        +getBookingRepository(string type)
+        ...
+    }
+
+    RepositoryFactory --> InMemoryEventRepository
+    RepositoryFactory --> InMemoryUserRepository
+    RepositoryFactory --> InMemoryBookingRepository
+
+    class FileSystemEventRepository {
+        <<stub>>
+    }
+
+    EventRepositoryInterface <|.. FileSystemEventRepository
+
+
+```
+
 ##Mermaid.js UML Class Diagram
 
 ```mermaid
