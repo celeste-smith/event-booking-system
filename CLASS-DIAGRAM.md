@@ -129,7 +129,7 @@ classDiagram
 
 ```
 
-##Mermaid.js UML Class Diagram
+## Mermaid.js UML Class Diagram
 
 ```mermaid
 classDiagram
