@@ -3,6 +3,7 @@ namespace EventBookingSystem\Factories;
 
 use EventBookingSystem\Repositories\UserRepositoryInterface;
 use EventBookingSystem\Repositories\InMemory\InMemoryUserRepository;
+use EventBookingSystem\Repositories\Database\DatabaseUserRepository;
 // Include other repository interfaces and implementations as needed
 
 class RepositoryFactory
