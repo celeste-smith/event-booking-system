@@ -1,22 +1,32 @@
 <?php
-namespace EventBookingSystem\Services;
 
-use EventBookingSystem\Repositories\UserRepositoryInterface;
-use EventBookingSystem\Factories\RepositoryFactory;
+namespace Services;
+
+use Repositories\UserRepository;
+use Models\User;
 
 class UserService
 {
-    private UserRepositoryInterface $userRepository;
+    private UserRepository $userRepo;
 
-    public function __construct(string $storageType)
+    public function __construct(UserRepository $userRepo)
     {
-        $this->userRepository = RepositoryFactory::createUserRepository($storageType);
+        $this->userRepo = $userRepo;
     }
 
-    public function getUser(int $id)
+    public function createUser(array $data): User
     {
-        return $this->userRepository->find($id);
+        // Validate required fields
+        if (empty($data['name']) || empty($data['email'])) {
+            throw new \InvalidArgumentException("Name and email are required.");
+        }
+
+        $user = new User($data['name'], $data['email']);
+        return $this->userRepo->save($user);
     }
 
-    // Other service methods...
+    public function getUserById(string $userId): ?User
+    {
+        return $this->userRepo->findById($userId);
+    }
 }
