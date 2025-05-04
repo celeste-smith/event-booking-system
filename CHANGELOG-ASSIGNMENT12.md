@@ -18,3 +18,9 @@ All notable changes to this project will be documented in this file.
 
 ### Changed
 - Improved validation for email fields in user registration
+
+## When pushing commits
+git commit -m "Fix #4: Handle booking email failure"
+
+or for new features:
+git commit -m "Close #3: Implement POST /api/bookings"
