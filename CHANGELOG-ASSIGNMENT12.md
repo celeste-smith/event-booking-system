@@ -24,3 +24,7 @@ git commit -m "Fix #4: Handle booking email failure"
 
 or for new features:
 git commit -m "Close #3: Implement POST /api/bookings"
+
+## Screenshot of updated Kanban Board
+![Kanban Board](kanban_board_update.png)
+
