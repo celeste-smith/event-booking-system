@@ -47,7 +47,7 @@ jobs:
   deploy-artifact:
     needs: build-and-test
     runs-on: ubuntu-latest
-    if: always()
+    if: github.ref == 'refs/heads/main'
 
     steps:
       - name:  Checkout code
