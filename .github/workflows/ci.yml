@@ -31,6 +31,13 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven
 
+      - name:  Upload test reports
+        if: always()
+        uses: actions/upload-artifact@v3.1.4
+        with:
+          name: test-report
+          path: target/surefire-reports
+
    
 
   
