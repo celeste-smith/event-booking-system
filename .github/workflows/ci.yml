@@ -34,6 +34,9 @@ jobs:
       - name:  Upload test reports
         if: always()
         uses: actions/upload-artifact@v3.1.4
+        # fallback for restricted environments:
+        # uses: actions/upload-artifact@c86cfc9e6503b2e6e3b2d15b4d5b0b02de60d379
+
         with:
           name: test-report
           path: target/surefire-reports
