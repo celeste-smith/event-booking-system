@@ -20,6 +20,10 @@ Stage	Trigger	Description
 - Continuous Deployment (CD)	Push to main after PR merge	Builds .jar and uploads it as an artifact.
 - Blocking PRs	Pull Requests to main	PRs must pass tests before they can be merged.
 
+![Test Results 1](https://github.com/celeste-smith/event-booking-system/blob/main/test-results.png)
+![Test Results 2](https://github.com/celeste-smith/event-booking-system/blob/main/test-results2.png)
+
+
 ## Branch Protection Rule
 To ensure quality, the main branch is protected:
 
