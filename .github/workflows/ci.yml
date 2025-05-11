@@ -33,13 +33,34 @@ jobs:
 
       - name:  Upload test reports
         if: always()
-        uses: actions/upload-artifact@v3.1.4
-        # fallback for restricted environments:
-        # uses: actions/upload-artifact@c86cfc9e6503b2e6e3b2d15b4d5b0b02de60d379
-
+        uses: actions/upload-artifact@v3
         with:
           name: test-report
           path: target/surefire-reports
+
+  deploy-artifact:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - name:  Checkout code
+        uses: actions/checkout@v3
+
+      - name:  Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name:  Build JAR
+        run: mvn -B package
+
+      - name:  Upload release JAR
+        uses: actions/upload-artifact@v3
+        with:
+          name: event-booking-system
+          path: target/*.jar
 
    
 
