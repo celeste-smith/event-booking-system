@@ -29,6 +29,8 @@ To ensure quality, the main branch is protected:
 
 - Requires passing CI status checks
 
+![Branch Protection Rules](https://github.com/celeste-smith/event-booking-system/blob/main/branch-protection-rules.png)
+
 ## Artifacts & Reports
 ###  Test Results
 Once a pull request is submitted, the CI workflow runs and shows test results. If tests fail, the PR cannot be merged.
