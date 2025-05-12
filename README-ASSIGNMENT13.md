@@ -47,6 +47,9 @@ In my case, it failed to deploy:
 ##  Release Artifact
 When a PR is merged into main, GitHub Actions builds the final .jar file and uploads it as a downloadable release artifact under the workflow run.
 
+A PR example:
+![PR Example](https://github.com/celeste-smith/event-booking-system/blob/main/pr.png)
+
 
 
 
