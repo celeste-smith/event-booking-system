@@ -39,6 +39,11 @@ To ensure quality, the main branch is protected:
 ###  Test Results
 Once a pull request is submitted, the CI workflow runs and shows test results. If tests fail, the PR cannot be merged.
 
+In my case, it failed to deploy:
+
+![Failed Artifact Deployment](https://github.com/celeste-smith/event-booking-system/blob/main/artifact.png)
+
+
 ##  Release Artifact
 When a PR is merged into main, GitHub Actions builds the final .jar file and uploads it as a downloadable release artifact under the workflow run.
 
