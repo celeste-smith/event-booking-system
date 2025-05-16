@@ -16,7 +16,7 @@ Before contributing, please ensure you have the following installed:
 To set up the project locally:
 
 ```bash
-git clone https://github.com/your-username/event-booking-system.git
+git clone https://github.com/celeste-smith/event-booking-system.git
 cd event-booking-system
 
 ```
