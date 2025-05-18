@@ -63,3 +63,8 @@ Please read our [CONTRIBUTING.md](CONTRIBUTING.md) guide and check the issues la
 - `feature-request` (new enhancements)
 
 ---
+
+##  License
+
+This project is licensed under the [MIT License](LICENSE).
+
